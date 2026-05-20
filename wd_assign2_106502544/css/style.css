@@ -1,0 +1,169 @@
+/* Applies to everything */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: plum;
+}
+
+/* Header */
+header, nav, footer {
+    width: 100%;
+    padding: 10px;
+}
+
+header h1 {
+    text-align:center;
+    animation-name: fadeDown;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-out;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+nav li {
+    flex: 1;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: plum;
+    padding: 0.2em 0.6em;
+    transition-property: color, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+nav a:hover:not(.active) {
+    background-color: purple;
+    transform: translateY(-3px);
+}
+
+nav a.active {
+    background-color: purple;
+    font-weight: bold;
+    cursor: default;
+    transform: translateY(-3px);
+}
+
+/* Main content area */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+main h2 {
+    text-align: center;
+    color: plum;
+    margin-bottom: 25px;
+}
+
+/* Forms */
+#regform {
+    max-width: 500px;
+    margin: auto;
+}
+
+.textinput, .numinput, .radioinput, .checkboxinput, .buttoninput {
+    margin-bottom: 15px;
+}
+
+.textinput label, .numinput label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.textinput input, .numinput input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.radioinput, .checkboxinput {
+    margin-bottom: 20px;
+}
+
+.radioinput label {
+    margin-right: 15px;
+}
+
+.checkboxinput input {
+    margin-right: 4px;
+}
+
+.checkboxinput label {
+    margin-right: 12px;
+}
+
+.checkboxinput .checkboxlabel {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.radiolabel {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.boldlabel {
+    font-weight: bold;
+}
+
+legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: plum;
+}
+
+/* Section headings */
+section {
+    margin-bottom: 20px;
+    opacity: 0;
+    animation-name: slideUp;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+section h2 {
+    color: plum;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(255, 223, 255);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Mobile */
+@media screen and (max-width: 680px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        border-bottom: 1px solid white;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    nav a {
+        border-right: 1px solid white;
+    }
+}

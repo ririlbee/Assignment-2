@@ -1,0 +1,159 @@
+<!--
+The reservation page must contain a form including:
+    -Full name
+    -Email address
+    -Phone number
+    -Restaurant selection (dropdown menu, pre-filled if coming from recommendation page
+    or home page)
+    -Reservation date and time (must not be in the past)
+    -Number of people (must be greater than 0)
+    -Special requests (optional)
+    -Deposite amount (predefined for each restaurant and dynamically updated based on the
+    selected restaurant)
+    -Deposit method (voucher / online payment)
+    -Voucher code (textbox, 12 digits, show only if Voucher is selected as the payment
+    method)
+    -Credit card details (textbox, shown only if online payment is selected; Visa/MC=16
+    digits, Amex=15 digits). NOTE: Please use fake card information for testing. No real
+    validation is required.
+    -Billing email address (with a "Same as email address" otion that automatically fills
+    this field with the previously entered email address when selected)
+Users can access this page either by selecting a restaurant from the home page or via
+the recommendation page.
+
+If users enter this page directly, they can chose a restaurant from the Restaurant
+selection dropdown menu.
+
+*Users can always change the restaurant selection at any time on the reservation page.
+*Form method must be set to POST, and the action must point to:
+http://mercury.swin.edu.au/it000000/cos10005/regtest.php
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />	
+	<meta name="description" content="Web development">
+	<meta name="keywords" content="">
+	<meta name="author" content="Reagan">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script src="js/script.js"></script>
+
+	<title>Reservations</title>
+</head>
+<body>
+    <header>
+        <h1>Make a Reservation</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommendations</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="reservation.html"  class="active">Reservations</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="reservationform" method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+            <fieldset>
+                <legend>Personal Details</legend>
+                
+                <div class="textinput">
+                    <label for="fname" class="boldlabel">Firstname</label>
+                    <input id="fname" type="text" name="fname">
+                </div>
+
+                <div class="textinput">
+                    <label for="lname" class="boldlabel">Lastname</label>
+                    <input id="lname" type="text" name="lname">
+                </div>
+
+                <div class="textinput">
+                    <label for="email" class="boldlabel">Email</label>
+                    <input id="email" type="text" name="email">
+                </div>
+
+                <div class="numinput">
+                    <label for="phone" class="boldlabel">Phone Number</label>
+                    <input id="phone" type="number" name="phone">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Reservation Details</legend>
+
+                <div class="dropdowninput">
+                    <label for="restselect" class="boldlabel">Select a Restaurant</label>
+                    <!--Input for Restaurant selection-->
+                </div>
+
+                <div class="dateinput">
+                    <label for="datetime" class="boldlabel">Reservation Date and Time</label>
+                    <!--Input for reservation date and time-->
+                </div>
+
+                <div class="dropdowninput">
+                    <label for="numguests" class="boldlabel">Number of people</label>
+                    <!--Input for number of guests-->
+                </div>
+
+                <div class="textinput">
+                    <label for="specreqs" class="boldlabel">Special Requests</label>
+                    <!--OPTIONAL Input for special requests-->
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment Details</legend>
+
+                <div class="prefilled">
+                    <label for="depamount" class="boldlabel">Deposit Amount</label>
+                    <!--PREFILLED CAN'T BE EDITED-->
+                </div>
+
+                <div class="radioinput">
+                    <span class="radiolabel">Deposit Method</span>
+                    
+                    <input id="voucher" type="radio" name="depmethod" value="voucher">
+                    <label for="voucher">Voucher</label>
+
+                    <input id="onlinepayment" type="radio" name="depmethod" value="onlinepayment">
+                    <label for="onlinepayment">Online Payment</label>
+                </div>
+
+                <div class="numinput">
+                    <label for="vcode" class="boldlabel">Voucher Code</label>
+                    <input id="vcode" type="number" name="vcode">
+                </div>
+
+                <div class="radioinput">
+                    <span class="radiolabel">Online Payment Method</span>
+
+                    <input id="visamc" type="radio" name="cardtype" value="visamc">
+                    <label for="visamc">Visa/Mastercard</label>
+
+                    <input id="amex" type="radio" name="cardtype" value="amex">
+                    <label for="amex">American Express (Amex)</label>
+                </div>
+                
+                <div class="textinput">
+                    <label for="billingemail" class="boldlabel">Billing Email Address</label><br>
+                    <label for="sameemail" class="boldlabel">Same as Email Address</label>
+                    <input id="sameemail" type="checkbox" name="sameemail" value="sameemail"><br>
+                    <input id="billingemail" type="text" name="billingemail">
+                </div>
+            </fieldset>
+
+            <div class="buttoninput">
+                <input type="submit" value="Test Register">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <!-- &copy adds a copyright symbol -->
+        <p>&copy; 2026 Reagan</p>
+    </footer>
+</body>

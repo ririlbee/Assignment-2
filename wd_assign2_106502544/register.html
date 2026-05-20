@@ -1,0 +1,125 @@
+<!--
+The registration page must include a form with the following fields:
+    -Username
+    -Email address
+    -Phone number
+    -Password and confirm password
+    -Gender
+    -Dietary preferences
+    -Country/region
+    -Submit
+The form must use JavaScript validation
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />	
+	<meta name="description" content="Web development">
+	<meta name="keywords" content="">
+	<meta name="author" content="Reagan">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script src="js/script.js"></script>
+
+	<title>Register</title>
+</head>
+<body>
+    <header>
+        <h1>Make an Account</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommendations</a></li>
+            <li><a href="register.html" class="active">Register</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="regform" method="post"
+            action="http://mercury.swin.edu.au/it000000/formtest.php">
+
+            <div class="textinput">
+                <label for="user" class="boldlabel">Username</label>
+                <input id="user" type="text" name="user">
+            </div>
+
+            <div class="textinput">
+                <label for="email" class="boldlabel">Email</label>
+                <input id="email" type="text" name="email">
+            </div>
+
+            <div class="numinput">
+                <label for="phone" class="boldlabel">Phone Number</label>
+                <input id="phone" type="number" name="phone">
+            </div>
+
+            <div class="textinput">
+                <label for="pwd1" class="boldlabel">Password</label>
+                <input id="pwd1" type="password" name="pwd1">
+            </div>
+
+            <div class="textinput">
+                <label for="pwd2" class="boldlabel">Retype Password</label>
+                <input id="pwd2" type="password" name="pwd2">
+            </div>
+
+            <div class="radioinput">
+                <span class="radiolabel">Gender</span>
+
+                <input id="genm" type="radio" name="gender" value="M">
+                <label for="genm">Male</label>
+
+                <input id="genf" type="radio" name="gender" value="F">
+                <label for="genf">Female</label>
+            </div>
+
+            <div class="checkboxinput">
+                <span class="checkboxlabel">Dietary Preferences</span>
+
+                <input id="vegan" type="checkbox" name="dietary" value="V">
+                <label for="vegan">Vegan</label>
+
+                <input id="gfree" type="checkbox" name="dietary" value="GF">
+                <label for="gfree">Gluten Free</label>
+
+                <input id="dfree" type="checkbox" name="dietary" value="DF">
+                <label for="dfree">Dairy Free</label>
+
+                <input id="halal" type="checkbox" name="dietary" value="H">
+                <label for="halal">Halal</label>
+
+                <input id="kosher" type="checkbox" name="dietary" value="K">
+                <label for="kosher">Kosher</label>
+
+                <input id="keto" type="checkbox" name="dietary" value="Ke">
+                <label for="keto">Ketogenic</label>
+
+                <input id="nutall" type="checkbox" name="dietary" value="NA">
+                <label for="nutall">Nut Allergy</label>
+
+                <input id="shellall" type="checkbox" name="dietary" value="SA">
+                <label for="shellall">Shellfish Allergy</label>
+
+                <input id="other" type="checkbox" name="dietary" value="O">
+                <label for="other">Other</label>
+            </div>
+
+            <div class="textinput">
+                <label for="ctry" class="boldlabel">Country/Region</label>
+                <input id="ctry" type="text" name="ctry">
+            </div>
+
+            <div class="buttoninput">
+                <input type="submit" value="Test Register">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <!-- &copy adds a copyright symbol -->
+        <p>&copy; 2026 Reagan</p>
+    </footer>
+</body>
