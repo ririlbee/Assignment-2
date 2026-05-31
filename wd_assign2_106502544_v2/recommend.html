@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />	
+	<meta name="description" content="Web development">
+	<meta name="keywords" content="">
+	<meta name="author" content="Reagan">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script src="js/script.js"></script>
+
+	<title>Recommendations</title>
+</head>
+<body>
+    <header>
+        <h1>Recommended Restaurants</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html" class="active">Recommendations</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="recommendationform">
+            <fieldset>
+                <legend>Preferences</legend>
+                <div class="checkboxinput">
+                    <div class="checkbox-pair">
+                        <input id="vegan" type="checkbox" name="dietary" value="V">
+                        <label for="vegan">Vegan</label>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input id="gfree" type="checkbox" name="dietary" value="GF">
+                        <label for="gfree">Gluten Free</label>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input id="dfree" type="checkbox" name="dietary" value="DF">
+                        <label for="dfree">Dairy Free</label>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input id="halal" type="checkbox" name="dietary" value="H">
+                        <label for="halal">Halal</label>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input id="kosher" type="checkbox" name="dietary" value="K">
+                        <label for="kosher">Kosher</label>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input id="keto" type="checkbox" name="dietary" value="Ke">
+                        <label for="keto">Ketogenic</label>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input id="nutall" type="checkbox" name="dietary" value="NA">
+                        <label for="nutall">Nut Allergy</label>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input id="shellall" type="checkbox" name="dietary" value="SA">
+                        <label for="shellall">Shellfish Allergy</label>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input id="other" type="checkbox" name="dietary" value="O">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="side-by-side">
+                <fieldset>
+                    <legend>Budget Range</legend>
+                    <select name="budget" id="budget">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dining Purpose</legend>
+                    <select name="purpose" id="purpose">
+                        <option value="family">Family</option>
+                        <option value="friend">Friend</option>
+                        <option value="date">Date</option>
+                        <option value="business">Business</option>
+                        <option value="casual">Casual</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <button type="submit">Get Recommendations</button>
+        </form>
+
+        <section id="recommendations">
+            <!-- Recommended restaurants will be displayed here -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- &copy adds a copyright symbol -->
+        <p>&copy; 2026 Reagan</p>
+    </footer>
+</body>
